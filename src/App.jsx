@@ -13,7 +13,7 @@ function App() {
           count is {count}
         </button>
         <p>
-          Track-Tube learning LMS is a platform designed to help you learn and track your progress in various subjects.
+          Track-Tube learning LMS is a platform designed to help you learn and track your progress in various component.
         </p>
       </div>
       
