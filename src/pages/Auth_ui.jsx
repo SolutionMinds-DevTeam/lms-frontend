@@ -2,7 +2,7 @@ import React from 'react'
 import '../assets/css/public.css'
 import { Image, imgFile } from '../components/Image'
 import DivContainer from '../components/DivContainer'
-import { Button, Form, FormGroups, Input, Label } from '../components/Form'
+import { Button, Form, Input, Label, Option, Select } from '../components/Form'
 
 const Auth_ui = () => {
   return (
@@ -33,7 +33,17 @@ const Auth_ui = () => {
                     <Input type='submit' value={'Save'} />
                 </div>
                
-                <FormGroups/>
+               <Select>
+                  <Option>Select-Option</Option>
+                  <Option>C</Option>
+                  <Option >C++</Option>
+                  <Option>Python</Option>
+               </Select>
+
+               <Select>
+                  <Option>Select-Option</Option>
+                  <Option>C</Option>
+               </Select>
             </Form>
          </div>
       } 

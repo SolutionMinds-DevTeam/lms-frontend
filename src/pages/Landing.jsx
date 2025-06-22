@@ -2,11 +2,24 @@ import '../assets/css/public.css'
 import { Image, imgFile } from '../components/Image'
 import Button from '../components/Button'
 import { useNavigate } from 'react-router-dom';
+import { Container } from '../components/Container';
+import Popup from '../components/Popup';
+import { useState } from 'react';
 
 function Landing() {
   const navigate=useNavigate();
+
+  const [isPopup,setIsPopup]=useState(false);
+
+  const handleSave=()=>{
+    alert("Saving...");
+  };
+
   return (
-    <div className='landing-page'>
+    <>
+    {isPopup? <Popup  message={'Are you sure you want!'} onConfirm={handleSave} setIsPopup={setIsPopup}  />: null}
+
+    <div className='landing-page' style={{position:'relative'}}>
       <header>
         <div className="logo">
           <Image src={imgFile.logo}
@@ -24,7 +37,7 @@ function Landing() {
           <h1>Learn Better, Learn Smarter</h1>
           <p>Get Organized with YouTube Learning</p>
           <Button
-            onClick={() => navigate('/auth')}
+            onClick={() => setIsPopup(true)}
             Children={'Get Started'}
             type="button"
             className="get-started-button"
@@ -38,7 +51,10 @@ function Landing() {
         </div>
       </main>
 
+
     </div>
+    </>
+
   )
 }
 export default Landing

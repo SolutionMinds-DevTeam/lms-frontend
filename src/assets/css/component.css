@@ -1,30 +1,48 @@
-
 /* Div container component css  */
-.div-container-component{
+.div-container-component {
+    width: 100%;
+    padding: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.div-col-container-component {
+    width: 100%;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.layout-container-component {
     width: 100%;
     padding: 10px;
     display: flex;
     border: 1px solid white;
 
 }
-.div-container-component>.left, .div-container-component>.right{
-   width: 50%;
-   display: flex;
-   padding: 5px;
-   border: 1px solid;
+
+.layout-container-component>.left,
+.layout-container-component>.right {
+    width: 50%;
+    display: flex;
+    padding: 5px;
+    border: 1px solid;
 }
+
 /* -----------------------  */
 
 
 /* image component  */
-.image-style-component{
+.image-style-component {
     height: 50px;
     width: 50px;
 }
+
 /*--------------  */
 
 /* Form component css  */
-.form-container{
+.form-container {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -33,14 +51,85 @@
 }
 
 
-.form-label{
+.form-label {
     width: 100%;
     padding: 5px;
 }
-.form-input{
+
+.form-input {
     width: 100%;
-    padding:8px 5px;
+    padding: 8px 5px;
     border: 1px solid rgba(128, 128, 128, 0.466);
     outline-style: none;
 }
+
+.form-select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid rgba(128, 128, 128, 0.664);
+    outline-style: none;
+}
+
+.form-button {
+    width: 100px;
+    padding: 0.5rem;
+    outline-style: none;
+    background: gray;
+    border: 1px solid rgba(128, 128, 128, 0.605);
+    cursor: pointer;
+}
+
 /* -------------------- */
+
+
+
+/* Popup COntianer */
+
+.popup-container {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(47, 47, 47, 0.234);
+    backdrop-filter: blur(5px);
+    position: absolute;
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.popup-container>div {
+    width: 450px;
+    height: 350px;
+    justify-content: center;
+    align-items: center;
+    background-image: radial-gradient(circle, #431515, #341214, #260f12, #18080b, #000000);
+    border-radius: 8px;
+    gap: 18px;
+}
+
+.popup-container>div>div {
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+
+}
+
+.popup-container>div>div>h3{
+    color: white;
+    font-size: 24px;
+    font-weight: 700px;
+}
+
+.popup-container>div>div:nth-child(2)>button:nth-child(1) {
+    background: rgba(95, 248, 24, 0.844);
+    border-radius: 5px;
+    font-weight: 400;
+
+}
+
+.popup-container>div>div:nth-child(2)>button:nth-child(2) {
+    background: #f00;
+    border-radius: 5px;
+    color: white;
+    font-weight: 400;
+}

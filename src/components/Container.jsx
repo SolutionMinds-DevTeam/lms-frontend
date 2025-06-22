@@ -1,6 +1,26 @@
 import React from 'react'
 
-const DivContainer = ({
+ const Container = ({children,className='',style={}}) => {
+  const baseClassName='div-container-component';
+  return (
+    <div className={`${baseClassName} ${className}`.trim()} style={style}>
+      {children}
+    </div>
+  )
+}
+
+ const ColContainer = ({children,className='',style={}}) => {
+  const baseClassName='div-col-container-component';
+  return (
+    <div className={`${baseClassName} ${className}`.trim()} style={style}>
+      {children}
+    </div>
+  )
+}
+
+
+
+const LayoutContainer = ({
     leftChild,
     rightChild,
     classNameHead="",
@@ -24,4 +44,4 @@ const DivContainer = ({
   )
 }
 
-export default DivContainer
+export {Container,LayoutContainer,ColContainer}

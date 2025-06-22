@@ -35,7 +35,7 @@ const Input = ({ type = "text", name, value, onChange, placeholder,className='' 
 }
 
 function Button({
-    Children,
+    children,
     onClick,
     type = "button",
     className = "",
@@ -43,27 +43,49 @@ function Button({
     disabled = false,
     ...props
 }) {
+
+    const baseClassName='form-button';
     return (
         <button
-        type={type}
-        onClick={onClick}
-        className={className}
-        style={style}
-        disabled={disabled}
-        {...props}
-        >{Children}</button>
+            type={type}
+            onClick={onClick}
+            className={`${baseClassName} ${className}`.trim()}
+            style={style}
+            disabled={disabled}
+            {...props}
+        >
+            {children}
+        </button>
     )
 }
 
 const Select = ({children, value, onChange, className='', style}) =>{
+    const baseClassName='form-select';
     return (
-        <select name="" id="">
+        <select 
+            value={value}
+            onChange={onChange}
+            className={`${baseClassName} ${className}`.trim()}
+            style={style}
+           >
             {children}
-            
         </select>
+    )
+} 
+
+const Option = ({children,disabled='',selected='', value,style}) =>{
+    return (
+        <option 
+            selected={selected}
+            disabled={disabled}
+            value={value}
+            style={style}
+           >
+            {children}
+        </option>
     )
 } 
 
 
 
-export { Label, Input, Form, Button, Select}
+export { Label, Input, Form, Button, Select, Option}
