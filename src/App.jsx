@@ -1,21 +1,18 @@
 import { useState } from 'react'
-import './App.css'
+import './assets/css/component.css'
+import Landing from './pages/landing'
+import { Route, Routes } from 'react-router-dom'
+import Dashboard from './pages/Dashboard'
+import Auth_ui from './pages/Auth_ui'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-     
-      <h1>Track-Tube</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Track-Tube learning LMS is a platform designed to help you learn and track your progress in various component.
-        </p>
-      </div>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/auth" element={<Auth_ui />} />
+        <Route path='/dashboard' element={<Dashboard/>}/>
+      </Routes>
       
     </>
   )
