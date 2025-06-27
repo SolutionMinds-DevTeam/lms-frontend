@@ -1,9 +1,8 @@
 import React from 'react'
 import { ColContainer, Container } from './Container'
-import { Image } from './Image'
 import { Button } from './Form'
 
-const Popup = ({message,onConfirm,setIsPopup}) => {
+const Confirm = ({message,onConfirm,setIsPopup}) => {
     
     const onCancel=()=>{
        setIsPopup(false)
@@ -23,4 +22,37 @@ const Popup = ({message,onConfirm,setIsPopup}) => {
     )
 }
 
-export default Popup
+const Alert = ({message,setIsPopup}) => {
+    
+    const onCancel=()=>{
+       setIsPopup(false)
+    };
+    return (
+        <Container className='popup-alert'>
+           
+            <div className='popup-alert-icon'><i class="fa-solid fa-triangle-exclamation"></i></div>
+            <h3>{message}</h3>
+
+        </Container>
+    )
+}
+
+const Sucess = ({message,setIsPopup}) => {
+    
+    const onCancel=()=>{
+       setIsPopup(false)
+    };
+    return (
+        <Container className='popup-sucess'>
+           
+            <div className='popup-sucess-icon'><i class="fa-solid fa-circle-check"></i></div>
+            <h3>{message}</h3>
+
+        </Container>
+    )
+}
+
+
+
+
+export {Confirm,Alert,Sucess}

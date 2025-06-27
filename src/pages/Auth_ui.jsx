@@ -1,8 +1,8 @@
 import React from 'react'
 import '../assets/css/public.css'
 import { Image, imgFile } from '../components/Image'
-import DivContainer from '../components/DivContainer'
 import { Button, Form, Input, Label, Option, Select } from '../components/Form'
+import { LayoutContainer } from '../components/Container'
 
 const Auth_ui = () => {
   return (
@@ -18,50 +18,48 @@ const Auth_ui = () => {
         </div>
       </header>
 
-      <DivContainer leftChild={
-         <div style={{width:'100%',display:'flex',justifyContent:'center',alignItems:'center'}}>
-            <Form onSubmit={()=>alert('form Submitted')}>
-                <div className='form-group'>
-                    <Label htmlFor={'name'} className='form-label'>Name</Label>
-                    <Input type='text' placeholder={'Enter Your Name'} />
-                </div>
-                <div className='form-group'>
-                    <Label htmlFor={'email'} className='form-label'>Email</Label>
-                    <Input type='text' placeholder={'Enter Your Name'} />
-                </div>
-                <div className='form-group'>
-                    <Input type='submit' value={'Save'} />
-                </div>
-               
-               <Select>
-                  <Option>Select-Option</Option>
-                  <Option>C</Option>
-                  <Option >C++</Option>
-                  <Option>Python</Option>
-               </Select>
-
-               <Select>
-                  <Option>Select-Option</Option>
-                  <Option>C</Option>
-               </Select>
-            </Form>
-         </div>
-      } 
-
-      rightChild={
-       <Image src={imgFile.heroimg} className='auth-image' />
+      <LayoutContainer leftChild={
+        <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <Login/>
+        </div>
       }
 
-      classNameHead='div-container'
-      classNameLeft='div-left'
-      classNameRight='div-right'
-      
+        rightChild={
+          <Image src={imgFile.firstimg} className='auth-image' />
+        }
+
+        classNameHead='div-container'
+        classNameLeft='div-left'
+        classNameRight='div-right'
+
       />
 
-            
+
 
     </div>
   )
 }
 
-export default Auth_ui
+
+const Login = () => {
+  return (
+    <Form onSubmit={() => alert('form Submitted')}>
+      <div className='form-group'>
+        <Label htmlFor={'name'} className='form-label'>Name</Label>
+        <Input type='text' placeholder={'Enter Your Name'} />
+      </div>
+      <div className='form-group'>
+        <Label htmlFor={'email'} className='form-label'>Email</Label>
+        <Input type='text' placeholder={'Enter Your Name'} />
+      </div>
+      <div className='form-group'>
+        <Input type='submit' value={'Save'} />
+      </div>
+    </Form>
+  )
+}
+
+
+
+
+export { Auth_ui, Login };

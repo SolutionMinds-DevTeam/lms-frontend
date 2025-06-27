@@ -70,6 +70,8 @@
     outline-style: none;
 }
 
+/* form button */
+
 .form-button {
     width: 100px;
     padding: 0.5rem;
@@ -114,7 +116,7 @@
 
 }
 
-.popup-container>div>div>h3{
+.popup-container>div>div>h3 {
     color: white;
     font-size: 24px;
     font-weight: 700px;
@@ -132,4 +134,88 @@
     border-radius: 5px;
     color: white;
     font-weight: 400;
+}
+
+/* popup-alert */
+
+.popup-alert {
+    position: absolute;
+    background-color: #160b0b;
+    color: #f4c7c7;
+    z-index: 9999;
+    left: 0;
+    right: 0;
+    width: 1400px;
+    gap: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    top: 80px;
+    justify-content: center;
+    animation: slideInRight 0.4s ease forwards;
+    opacity: 0;
+    padding: 10px;
+    min-width: 450px;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translate(100%, -20%);
+        /* Start far right */
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(-50%, -20%);
+        /* Final centered position */
+        opacity: 1;
+    }
+}
+
+.popup-alert-icon i{
+    color: rgb(252, 78, 78);
+    font-size: 24px;
+}
+
+
+/* popup-Sucess */
+
+.popup-sucess {
+    position: absolute;
+    background-color: #0C130D;
+    color: #CCE8CD;
+    z-index: 9999;
+    left: 0;
+    right: 0;
+    width: 90%;
+    gap: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    top: 30px;
+    justify-content: center;
+    animation: slideInRight 0.4s ease forwards;
+    opacity: 0;
+    padding: 10px;
+    min-width: 450px;
+    position: fixed;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translate(100%, -20%);
+        /* Start far right */
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(-50%, -20%);
+        /* Final centered position */
+        opacity: 1;
+    }
+}
+
+.popup-sucess-icon i{
+    color: rgb(35, 137, 32);
+    font-size: 24px;
 }

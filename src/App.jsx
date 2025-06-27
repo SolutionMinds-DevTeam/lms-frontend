@@ -3,7 +3,7 @@ import './assets/css/component.css'
 import Landing from './pages/landing'
 import { Route, Routes } from 'react-router-dom'
 import Dashboard from './pages/Dashboard'
-import Auth_ui from './pages/Auth_ui'
+import {Auth_ui} from './pages/Auth_ui'
 
 function App() {
   return (
