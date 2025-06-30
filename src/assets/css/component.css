@@ -1,5 +1,5 @@
 /* Div container component css  */
-.div-container-component {
+/* .div-container-component {
     width: 100%;
     padding: 0.5rem;
     display: flex;
@@ -28,7 +28,7 @@
     display: flex;
     padding: 5px;
     border: 1px solid;
-}
+} */
 
 /* -----------------------  */
 
@@ -54,6 +54,8 @@
 .form-label {
     width: 100%;
     padding: 5px;
+    color: white;
+    /* background-color: #b98a8a; */
 }
 
 .form-input {
@@ -76,7 +78,6 @@
     width: 100px;
     padding: 0.5rem;
     outline-style: none;
-    background: gray;
     border: 1px solid rgba(128, 128, 128, 0.605);
     cursor: pointer;
 }

@@ -1,18 +1,16 @@
 import React from 'react'
 
- const Container = ({children,className='',style={}}) => {
-  const baseClassName='div-container-component';
+const Container = ({ children, className = '' }) => {
   return (
-    <div className={`${baseClassName} ${className}`.trim()} style={style}>
+    <div className={`w-full flex p-2 flex-wrap ${className}`.trim()}>
       {children}
     </div>
   )
 }
 
- const ColContainer = ({children,className='',style={}}) => {
-  const baseClassName='div-col-container-component';
+const ColContainer = ({ children, className = '' }) => {
   return (
-    <div className={`${baseClassName} ${className}`.trim()} style={style}>
+    <div className={`w-full flex flex-col p-2  ${className}`.trim()}>
       {children}
     </div>
   )
@@ -21,27 +19,24 @@ import React from 'react'
 
 
 const LayoutContainer = ({
-    leftChild,
-    rightChild,
-    classNameHead="",
-    classNameLeft="",
-    classNameRight=""
- }) => {
-
-    const headeBaseClass="layout-container-component";
-    const leftBaseClass="left";
-    const rightBaseClass="right";
+  leftChild,
+  rightChild,
+  classNameHead = "",
+  classNameLeft = "",
+  classNameRight = ""
+}) => {
 
   return (
-    <section className={`${headeBaseClass} ${classNameHead}`.trim()}>
-        <div className={`${leftBaseClass} ${classNameLeft}`.trim()}>
-            {leftChild}
-        </div>
-        <div className={`${rightBaseClass} ${classNameRight}`.trim()}>
-            {rightChild}
-        </div>
+    <section className={`w-full p-2.4 flex md:flex-row flex-col ${classNameHead}`.trim()}>
+      <div className={`md:w-1/2 w-full flex justify-center p-1 !border !border-white-400 ${classNameLeft}`.trim()}>
+        {leftChild}
+      </div>
+
+      <div className={`md:w-1/2 w-full justify-center p-1 hidden !md:flex ${classNameRight}`.trim()}>
+        {rightChild}
+      </div>
     </section>
   )
 }
 
-export {Container,LayoutContainer,ColContainer}
+export { Container, LayoutContainer, ColContainer }

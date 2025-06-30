@@ -7,6 +7,8 @@ import ytimg from '../assets/images/yt-thumimg.png'
 import men from '../assets/images/men-img.png' 
 import slidfour from '../assets/images/slid4_img.png'
 import slidfive from '../assets/images/slid5_img.png'
+import signupImg from '../assets/images/img1.png'
+import loginImg from '../assets/images/img2.png'
 
 function Image({ src, alt='img', className = "", style = {} }) {
     const baseClass = "image-style-component";
@@ -29,7 +31,9 @@ const imgFile = {
     ytimg: ytimg,
     men: men,
     slidfour: slidfour,
-    slidfive: slidfive
+    slidfive: slidfive,
+    loginImg: loginImg,
+    signupImg: signupImg,
 }
 
 export { Image, imgFile }

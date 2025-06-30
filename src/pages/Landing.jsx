@@ -19,8 +19,6 @@ function Landing() {
     <>
       {isPopup ? <Confirm message={'Are you sure you want!'} onConfirm={handleSave} setIsPopup={setIsPopup} /> : null}
 
-      <Sucess message={'Are you sure you want!'}/>
-
       <div className='landing-page' style={{ position: 'relative' }}>
         <header>
           <div className="logo">
