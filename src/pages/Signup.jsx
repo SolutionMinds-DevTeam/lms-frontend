@@ -10,11 +10,13 @@ const Signup = () => {
    {/* ------ Header section ------ */}
         <header className='flex justify-between items-center px-[5%] py-3 bg-[#2c2c2c] border border-red-500 rounded-xl h-14 mt-2'>
           <div className="flex gap-2 items-center">
-            <Image src={imgFile.logo}
-              alt="LMS Logo"
-              w='w-12'
-              h='h-auto'
-            />
+           <Link to="/">
+              <Image src={imgFile.logo}
+                alt="LMS Logo"
+                w='w-12'
+                h='h-auto'
+              />
+            </Link>
             <h1 className='text-white text-2xl font-bold text-center'>YT-Learning</h1>
           </div>
         </header>

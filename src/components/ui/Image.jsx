@@ -12,6 +12,16 @@ import loginImg from '../../assets/images/img2.png'
 import speacker from '../../assets/images/Speaker.svg'
 import slid4Phone from '../../assets/images/slid4Phone.png'
 import google from '../../assets/images/Google.svg'
+import Dashboard from '../../assets/images/Dashboard.svg'
+import Space from '../../assets/images/Space.svg'
+import History from '../../assets/images/History.svg'
+import ToDo from '../../assets/images/ToDo.svg'
+import Notes from '../../assets/images/Notes.svg'
+import Analytics from '../../assets/images/Analytics.svg'
+import Arroetoggel from '../../assets/images/Arroetoggel.svg'
+import Notification from '../../assets/images/Notification.svg'
+import Profile from '../../assets/images/Profile.svg'
+
 
 
 const imgFile = {
@@ -28,6 +38,16 @@ const imgFile = {
     speacker: speacker,
     slid4Phone: slid4Phone,
     google: google,
+    Dashboard: Dashboard,
+    Space: Space,
+    History: History,
+    ToDo: ToDo,
+    Notes: Notes,
+    Analytics: Analytics,
+    Arroetoggel: Arroetoggel,
+    Notification: Notification,
+    Profile: Profile,
+
 }
 
 

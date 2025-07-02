@@ -1,9 +1,9 @@
 import '../assets/css/public.css'
 import { Image, imgFile } from '../components/ui/Image'
-import {Button} from '../components/ui/Form'
+import { Button } from '../components/ui/Form'
 import { Link, useNavigate } from 'react-router-dom';
 import { ColContainer, Container, LayoutContainer } from '../components/ui/Container';
-import {Confirm, Alert, Success } from '../components/ui/Popup';
+import { Confirm, Alert, Success } from '../components/ui/Popup';
 import { useState } from 'react';
 
 function Landing() {
@@ -23,11 +23,13 @@ function Landing() {
         {/* ------ Header section ------ */}
         <header className='flex justify-between items-center px-[5%] py-3 bg-[#2c2c2c] border border-red-500 rounded-xl h-14 mt-2'>
           <div className="flex gap-2 items-center">
-            <Image src={imgFile.logo}
-              alt="LMS Logo"
-              w='w-12'
-              h='h-auto'
-            />
+            <Link to="/">
+              <Image src={imgFile.logo}
+                alt="LMS Logo"
+                w='w-12'
+                h='h-auto'
+              />
+            </Link>
             <h1 className='text-white text-2xl font-bold text-center'>YT-Learning</h1>
           </div>
         </header>
@@ -35,84 +37,84 @@ function Landing() {
         {/* ------ main section ------ */}
         <main className='flex flex-col gap-2'>
 
-         {/* ------ section-1 ----- */}
-         <Container className='px-[5%] lg:h-[calc(100vh-60px)]  text-white  bg-[#1e1e1e] '>
-            <LayoutContainer 
-                className='justify-center items-center'
-                classNameLeft='items-center'
-                classNameRight='items-center'
+          {/* ------ section-1 ----- */}
+          <Container className='px-[5%] lg:h-[calc(100vh-60px)]  text-white  bg-[#1e1e1e] '>
+            <LayoutContainer
+              className='justify-center items-center'
+              classNameLeft='items-center'
+              classNameRight='items-center'
 
-                leftChild={
-                  <ColContainer className='items-start pt-[100px] pb-[30px] lg:py-0'>
-                    <h1 className='text-[60px] lg:text-[96px] font-bold leading-[1.1] mb-4'>Learn Better, Learn Smarter</h1>
-                    <p className='text-[1.2rem] font-medium text-white mb-4'>Get Organized with YouTube Learning</p>
-                    <Button
-                      onClick={() => navigate('/login')}
-                      
-                      type="button"
-                      className="text-xl bg-red-500 text-white border-0 rounded-lg font-medium w-40 py-2 px-4 hover:bg-[#c43838]"
-                    >Get start</Button>
-                  </ColContainer>
-                }
-                rightChild={
-                  <Image src={imgFile.heroimg}
-                    alt="Learning Images"
-                    w=':w-auto'
-                    h='h-[300px] lg:h-[500px]'
-                    className='border border-white rounded-xl object-cover'
-                  />
-                }
-                
+              leftChild={
+                <ColContainer className='items-start pt-[100px] pb-[30px] lg:py-0'>
+                  <h1 className='text-[60px] lg:text-[96px] font-bold leading-[1.1] mb-4'>Learn Better, Learn Smarter</h1>
+                  <p className='text-[1.2rem] font-medium text-white mb-4'>Get Organized with YouTube Learning</p>
+                  <Button
+                    onClick={() => navigate('/login')}
+
+                    type="button"
+                    className="text-xl bg-red-500 text-white border-0 rounded-lg font-medium w-40 py-2 px-4 hover:bg-[#c43838]"
+                  >Get start</Button>
+                </ColContainer>
+              }
+              rightChild={
+                <Image src={imgFile.heroimg}
+                  alt="Learning Images"
+                  w=':w-auto'
+                  h='h-[300px] lg:h-[500px]'
+                  className='border border-white rounded-xl object-cover'
+                />
+              }
+
             />
-         </Container>
+          </Container>
 
-         {/* ------ section-2 ----- */}
+          {/* ------ section-2 ----- */}
           <ColContainer className="py-[90px] lg:py-[40px] px-[5%] items-center relative overflow-hidden" >
             <div className='absolute top-0 lg:left-5 w-[98%] h-[95%] lg:border-2 border-red-600 lg:rotate-[-2deg] bg-[#2c2c2c] mt-7'></div>
-              <LayoutContainer 
+            <LayoutContainer
 
-                className='justify-center items-center z-50'
-                classNameLeft='items-center'
-                classNameRight='items-center'
-              
-                leftChild={
-                  <h1  className='text-[55px] lg:text-[62px] font-bold text-white w-full lg:w-[70%] leading-[1.2]'>
-                    <span className='text-red-600'>YouTube</span> is a giant free content library
-                  </h1>
-                }
+              className='justify-center items-center z-50'
+              classNameLeft='items-center'
+              classNameRight='items-center'
 
-                rightChild={
-                    <Image src={imgFile.ytimg}
-                      alt="Learning Images"
-                      w='w-[700px]'
-                      h='auto'
-                    />
-                }
-              
-              />
+              leftChild={
+                <h1 className='text-[55px] lg:text-[62px] font-bold text-white w-full lg:w-[70%] leading-[1.2]'>
+                  <span className='text-red-600'>YouTube</span> is a giant free content library
+                </h1>
+              }
 
-              <LayoutContainer
-                className='justify-center items-center z-50'
-                classNameLeft='items-center'
-                classNameRight='items-center'
+              rightChild={
+                <Image src={imgFile.ytimg}
+                  alt="Learning Images"
+                  w='w-[700px]'
+                  h='auto'
+                />
+              }
 
-                leftChild={
-                   <Image src={imgFile.men}
-                    alt="Learning Images"
-                    w='w-=auto'
-                    h='h-[400px]'
-                  />
-                }
-                rightChild={
-                  <h1 className='text-[40px] text-center lg:text-left lg:text-[50px] font-bold text-white w-full lg:w-[90%] leading-[1.2]'>
-                    <span className='text-red-600'>BUT</span>... it doesn't help you plan your learning,track your progress, or stay organized.
-                  </h1>
-                }
-              />
+            />
+
+            <LayoutContainer
+              className='justify-center items-center z-50'
+              classNameLeft='items-center'
+              classNameRight='items-center'
+
+              leftChild={
+                <Image src={imgFile.men}
+                  alt="Learning Images"
+                  w='w-=auto'
+                  h='h-[400px]'
+                />
+              }
+              rightChild={
+                <h1 className='text-[40px] text-center lg:text-left lg:text-[50px] font-bold text-white w-full lg:w-[90%] leading-[1.2]'>
+                  <span className='text-red-600'>BUT</span>... it doesn't help you plan your learning,track your progress, or stay organized.
+                </h1>
+              }
+            />
           </ColContainer>
 
-         {/* ------ section-3 ----- */}
-         <Container className='py-[60px] px-[5%]'>
+          {/* ------ section-3 ----- */}
+          <Container className='py-[60px] px-[5%]'>
             <LayoutContainer
               className='justify-center items-center z-50 text-white mt-10'
               classNameLeft='items-cente'
@@ -127,7 +129,7 @@ function Landing() {
               }
 
               rightChild={
-                 <ColContainer>
+                <ColContainer>
                   <Container className='items-center justify-center lg:justify-start'>
                     <Image src={imgFile.speacker} w='w-[50px]' h='auto' />
                     <h1 className='text-[50px] font-bold'>Don’t <span className='text-red-500'>worry</span></h1>
@@ -138,16 +140,16 @@ function Landing() {
                 </ColContainer>
 
               }
-          />
-         </Container>
-
-          
+            />
+          </Container>
 
 
-         {/* ------ section-4 ----- */}
+
+
+          {/* ------ section-4 ----- */}
           <Container className="py-[60px] px-[5%]">
             <LayoutContainer
-            
+
               className='justify-center items-center z-50 text-white mt-10'
               classNameLeft='items-cente p-2 lg:order-1 order-2 '
               classNameRight='items-center lg:order-2 lg:mt-0 mt-[200px]'
@@ -197,10 +199,10 @@ function Landing() {
                   />
                 </>
               }
-            
+
             />
           </Container>
-          
+
         </main>
 
         <footer className="bg-[#2c2c2c] text-center overflow-hidden p-28">
