@@ -21,18 +21,18 @@ const ColContainer = ({ children, className = '' }) => {
 const LayoutContainer = ({
   leftChild,
   rightChild,
-  classNameHead = "",
+  className= "",
   classNameLeft = "",
   classNameRight = ""
 }) => {
 
   return (
-    <section className={`w-full p-2.4 flex md:flex-row flex-col ${classNameHead}`.trim()}>
-      <div className={`md:w-1/2 w-full flex justify-center p-1 !border !border-white-400 ${classNameLeft}`.trim()}>
+    <section className={`w-full p-2.4 flex lg:flex-row flex-col ${className}`.trim()}>
+      <div className={`lg:w-1/2 w-full flex justify-center p-1 ${classNameLeft}`.trim()}>
         {leftChild}
       </div>
 
-      <div className={`md:w-1/2 w-full justify-center p-1 hidden !md:flex ${classNameRight}`.trim()}>
+      <div className={`lg:w-1/2 w-full flex justify-center p-1 ${classNameRight}`.trim()}>
         {rightChild}
       </div>
     </section>

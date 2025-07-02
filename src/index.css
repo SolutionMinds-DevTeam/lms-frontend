@@ -7,5 +7,23 @@
     box-sizing: border-box;
 }
 body{
+    @apply antialiased;
     font-family: Arial, sans-serif;
+}
+
+
+/* index.css or global.css */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #7b7b7b;
+  display: none;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #ffffff0f; /* Tailwind's blue-500 */
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ffffff16; /* Tailwind's blue-600 */
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import { ColContainer, LayoutContainer } from '../components/Container'
+import { ColContainer, LayoutContainer } from '../components/ui/Container'
 import { Link, Outlet } from 'react-router-dom'
 
 const Layout = () => {
