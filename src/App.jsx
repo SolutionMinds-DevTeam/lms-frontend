@@ -8,6 +8,9 @@ import Space from './pages/Space'
 import History from './pages/History'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
+import Todo from './pages/Todo'
+import Notes from './pages/Notes'
+import Analytics from './pages/Analytics'
 
 function App() {
   return (
@@ -20,6 +23,9 @@ function App() {
           <Route index element={<Dashboard/>}/>
           <Route path='space' element={<Space/>}/>
           <Route path='history' element={<History/>}/>
+          <Route path='todo' element={<Todo/>}/>
+          <Route path='notes' element={<Notes/>}/>
+          <Route path='analytics' element={<Analytics/>}/>
         </Route>
       </Routes>
 

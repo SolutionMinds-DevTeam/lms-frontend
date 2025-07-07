@@ -21,6 +21,8 @@ import Analytics from '../../assets/images/Analytics.svg'
 import Arroetoggel from '../../assets/images/Arroetoggel.svg'
 import Notification from '../../assets/images/Notification.svg'
 import Profile from '../../assets/images/Profile.svg'
+import menutoggle from '../../assets/images/menutoggle.svg'
+import CancelToggel from '../../assets/images/CancelToggel.svg'
 
 
 
@@ -47,6 +49,8 @@ const imgFile = {
     Arroetoggel: Arroetoggel,
     Notification: Notification,
     Profile: Profile,
+    menutoggle: menutoggle,
+    CancelToggel: CancelToggel,
 
 }
 
