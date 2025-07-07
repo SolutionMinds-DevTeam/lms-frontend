@@ -1,0 +1,21 @@
+body {
+    background-color: #1e1e1e;
+}
+
+
+
+/* layout style  */
+.layout-mainstyle-container {
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+.layout-mainstyle-container .left-menu-dash {
+    width: 16%;
+    background-color: #ccc;
+}
+
+.layout-mainstyle-container .right-main-canva {
+    width: 84%;
+    background-color: antiquewhite;
+}

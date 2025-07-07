@@ -1,0 +1,139 @@
+
+/* -----------------------  */
+
+
+
+/* Popup COntianer */
+
+.popup-container {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(47, 47, 47, 0.234);
+    backdrop-filter: blur(5px);
+    position: absolute;
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.popup-container>div {
+    width: 450px;
+    height: 350px;
+    justify-content: center;
+    align-items: center;
+    background-image: radial-gradient(circle, #431515, #341214, #260f12, #18080b, #000000);
+    border-radius: 8px;
+    gap: 18px;
+}
+
+.popup-container>div>div {
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+
+}
+
+.popup-container>div>div>h3 {
+    color: white;
+    font-size: 24px;
+    font-weight: 700px;
+}
+
+.popup-container>div>div:nth-child(2)>button:nth-child(1) {
+    background: rgba(95, 248, 24, 0.844);
+    border-radius: 5px;
+    font-weight: 400;
+
+}
+
+.popup-container>div>div:nth-child(2)>button:nth-child(2) {
+    background: #f00;
+    border-radius: 5px;
+    color: white;
+    font-weight: 400;
+}
+
+/* popup-alert */
+
+.popup-alert {
+    position: absolute;
+    background-color: #160b0b;
+    color: #f4c7c7;
+    z-index: 9999;
+    left: 0;
+    right: 0;
+    width: 1400px;
+    gap: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    top: 80px;
+    justify-content: center;
+    animation: slideInRight 0.4s ease forwards;
+    opacity: 0;
+    padding: 10px;
+    min-width: 450px;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translate(100%, -20%);
+        /* Start far right */
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(-50%, -20%);
+        /* Final centered position */
+        opacity: 1;
+    }
+}
+
+.popup-alert-icon i{
+    color: rgb(252, 78, 78);
+    font-size: 24px;
+}
+
+
+/* popup-Sucess */
+
+.popup-sucess {
+    position: absolute;
+    background-color: #0C130D;
+    color: #CCE8CD;
+    z-index: 9999;
+    left: 0;
+    right: 0;
+    width: 90%;
+    gap: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    top: 30px;
+    justify-content: center;
+    animation: slideInRight 0.4s ease forwards;
+    opacity: 0;
+    padding: 10px;
+    min-width: 450px;
+    position: fixed;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translate(100%, -20%);
+        /* Start far right */
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(-50%, -20%);
+        /* Final centered position */
+        opacity: 1;
+    }
+}
+
+.popup-sucess-icon i{
+    color: rgb(35, 137, 32);
+    font-size: 24px;
+}

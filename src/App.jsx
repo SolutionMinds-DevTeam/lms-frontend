@@ -1,22 +1,34 @@
 import { useState } from 'react'
-import './App.css'
+import './assets/css/component.css'
+import Landing from './pages/Landing'
+import { Route, Routes } from 'react-router-dom'
+import DashboardLy from './layouts/DashboardLy'
+import Dashboard from './pages/Dashboard'
+import Space from './pages/Space'
+import History from './pages/History'
+import Login from './pages/Login'
+import Signup from './pages/Signup'
+import Todo from './pages/Todo'
+import Notes from './pages/Notes'
+import Analytics from './pages/Analytics'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-     
-      <h1>Track-Tube</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Track-Tube learning LMS is a platform designed to help you learn and track your progress in various subjects.
-        </p>
-      </div>
-      
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path='/dashboard' element={<DashboardLy />}>
+          <Route index element={<Dashboard/>}/>
+          <Route path='space' element={<Space/>}/>
+          <Route path='history' element={<History/>}/>
+          <Route path='todo' element={<Todo/>}/>
+          <Route path='notes' element={<Notes/>}/>
+          <Route path='analytics' element={<Analytics/>}/>
+        </Route>
+      </Routes>
+
     </>
   )
 }
